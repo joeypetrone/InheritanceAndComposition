@@ -11,6 +11,9 @@ namespace InheritanceAndComposition.LegoPieces.Heads
         public override void Greet()
         {
             Console.WriteLine("Major Tom to Ground Control....");
+
+            //calls Greet method from Head class
+            base.Greet();
         }
 
         public void Observe()
