@@ -1,11 +1,10 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Text;
 
 namespace InheritanceAndComposition.LegoPieces.Heads
 {
     class PirateHead
     {
+        //auto properties
         public bool HasPatch { get; set; }
         public string FacialHair { get; set; }
         public HairColor HairColor { get; set; }

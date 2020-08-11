@@ -1,18 +1,14 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Text;
 
 namespace InheritanceAndComposition.LegoPieces.Heads
 {
-    class AstronautHead
+    class AstronautHead : Head
     {
         //auto properties
         public bool HasHelmet { get; set; } = true;
-        public HairColor HairColor { get; set; }
-        public EyeColor EyeColor { get; set; }
         public bool HasFreckles { get; set; }
 
-        public void Greet()
+        public override void Greet()
         {
             Console.WriteLine("Major Tom to Ground Control....");
         }

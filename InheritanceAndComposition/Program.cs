@@ -1,4 +1,5 @@
-﻿using System;
+﻿using InheritanceAndComposition.LegoPieces.Heads;
+using System;
 
 namespace InheritanceAndComposition
 {
@@ -6,7 +7,11 @@ namespace InheritanceAndComposition
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+            Head head = new AstronautHead();
+
+            head.EyeColor = EyeColor.Blue;
+
+            head.Greet();
         }
     }
 }
