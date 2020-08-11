@@ -2,11 +2,9 @@
 
 namespace InheritanceAndComposition.LegoPieces.Heads
 {
-    class CowgirlHead
+    class CowgirlHead : Head
     {
         //auto properties
-        public EyeColor EyeColor { get; set; }
-        public HairColor HairColor { get; set; }
         public bool HasHat { get; set; }
         public LipstickColor LipstickColor { get; set; }
 
@@ -15,7 +13,7 @@ namespace InheritanceAndComposition.LegoPieces.Heads
             Console.WriteLine($"The cowgirl flips her {HairColor} hair. She doesn't even care.");
         }
 
-        public void Greet()
+        public override void Greet()
         {
             Console.WriteLine("Howdy!");
         }

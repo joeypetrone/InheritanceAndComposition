@@ -1,5 +1,6 @@
 ﻿using InheritanceAndComposition.LegoPieces.Heads;
 using System;
+using System.Collections.Generic;
 
 namespace InheritanceAndComposition
 {
@@ -7,11 +8,37 @@ namespace InheritanceAndComposition
     {
         static void Main(string[] args)
         {
-            Head head = new AstronautHead();
+            var astronautHead = new AstronautHead();
+            var pirateHead = new PirateHead();
+            var cowgirlHead = new CowgirlHead();
 
-            head.EyeColor = EyeColor.Blue;
+            cowgirlHead.Greet();
+            cowgirlHead.HairFlip();
 
-            head.Greet();
+            pirateHead.Greet();
+            pirateHead.Sing();
+
+            astronautHead.Greet();
+            astronautHead.Observe();
+
+            var heads = new List<Head>();
+            heads.Add(astronautHead);
+            heads.Add(pirateHead);
+            heads.Add(cowgirlHead);
+
+            Console.WriteLine(new string('=', 50));
+
+            foreach(var head in heads)
+            {
+                Console.WriteLine($"The {head.HairColor} haired, {head.EyeColor} eyed head is greeting you...");
+                head.Greet();
+            }
+
+            var astronaut = new Minifigure("Major Tom", astronautHead);
+            var cowgirl = new Minifigure("Jessie", cowgirlHead);
+
+            cowgirl.SayHello();
+            astronaut.SayHello();
         }
     }
 }
