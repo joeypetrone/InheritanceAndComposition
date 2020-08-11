@@ -1,4 +1,5 @@
 ﻿using InheritanceAndComposition.LegoPieces.Heads;
+using InheritanceAndComposition.LegoPieces.Torsos;
 using System;
 using System.Collections.Generic;
 
@@ -39,6 +40,10 @@ namespace InheritanceAndComposition
 
             cowgirl.SayHello();
             astronaut.SayHello();
+
+            var torso = new FarmerTorso(Sex.Male);
+
+            torso.Garden();
         }
     }
 }
