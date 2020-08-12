@@ -13,14 +13,14 @@ namespace InheritanceAndComposition.LegoPieces.Torsos
         public Sex Sex { get; set; }
 
         //methods
-        public void Wave()
+        public virtual void Wave()
         {
             Console.WriteLine($"Waves hello with their {ArmType} arm.");
         }
 
         public void PickUp(string heavyObject)
         {
-            if (ArmType == ArmType.Strong)
+            if (IsStrong())
             {
                 Console.WriteLine($"I used my strong arms to pick up the {heavyObject}.");
             }
@@ -30,7 +30,7 @@ namespace InheritanceAndComposition.LegoPieces.Torsos
             }
         }
 
-        protected bool IsStrong()
+        protected virtual bool IsStrong()
         {
             return ArmType == ArmType.Strong;
         }
@@ -47,6 +47,7 @@ namespace InheritanceAndComposition.LegoPieces.Torsos
 
     enum Sex
     {
+        Unknown,
         Male,
         Female,
         Other
