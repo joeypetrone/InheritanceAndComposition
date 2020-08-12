@@ -41,9 +41,13 @@ namespace InheritanceAndComposition
             cowgirl.SayHello();
             astronaut.SayHello();
 
-            var torso = new FarmerTorso(Sex.Male);
+            var farmerTorso = new FarmerTorso(Sex.Male);
+            var ninjaTorso = new NinjaTorso();
 
-            torso.Garden();
+            farmerTorso.PickUp("Goat in pajamas");
+            ninjaTorso.PickUp("Box");
+
+
         }
     }
 }

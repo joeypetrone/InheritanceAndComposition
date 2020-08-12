@@ -14,7 +14,7 @@ namespace InheritanceAndComposition.LegoPieces.Torsos
         {
             Clothing = "Black ninja-yoroi";
             Accessory = "Red cape";
-            ArmType = ArmType.Strong;
+            ArmType = ArmType.Skinny;
             Sex = Sex.Unknown;
             Weapon = "Nunchaku";
         }
