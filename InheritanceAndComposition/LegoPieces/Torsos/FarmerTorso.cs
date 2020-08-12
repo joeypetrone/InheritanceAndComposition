@@ -24,6 +24,11 @@ namespace InheritanceAndComposition.LegoPieces.Torsos
             {
                 Console.WriteLine("I hate gardening...");
             }
-        } 
+        }
+
+        protected override bool IsStrong()
+        {
+            return Sex == Sex.Female;
+        }
     }
 }

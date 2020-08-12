@@ -18,6 +18,7 @@ namespace InheritanceAndComposition.LegoPieces.Torsos
             Console.WriteLine($"Waves hello with their {ArmType} arm.");
         }
 
+        //not virtual or abstract, this behavior is always the same.
         public void PickUp(string heavyObject)
         {
             if (IsStrong())
@@ -30,10 +31,18 @@ namespace InheritanceAndComposition.LegoPieces.Torsos
             }
         }
 
-        protected virtual bool IsStrong()
-        {
-            return ArmType == ArmType.Strong;
-        }
+        //virtual protected member being overriden in *some* classes, not required
+        //virtual can be overriden, but has default method
+        //protected virtual bool IsStrong()
+        //use virtual when there is a reasonable default behavior, but it might change
+        //{
+        //    return ArmType == ArmType.Strong;
+        //}
+
+        //abstract method, must be overriden in every class that inherits from this class
+        //this method must exist in every class that inherits
+        //use abstract when there is no reasonable default behavior
+        protected abstract bool IsStrong();
 
     }
 
