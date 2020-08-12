@@ -1,4 +1,5 @@
 ﻿using InheritanceAndComposition.LegoPieces.Heads;
+using InheritanceAndComposition.LegoPieces.Legs;
 using InheritanceAndComposition.LegoPieces.Torsos;
 using System;
 using System.Collections.Generic;
@@ -35,19 +36,20 @@ namespace InheritanceAndComposition
                 head.Greet();
             }
 
-            var astronaut = new Minifigure("Major Tom", astronautHead);
-            var cowgirl = new Minifigure("Jessie", cowgirlHead);
-
-            cowgirl.SayHello();
-            astronaut.SayHello();
-
             var farmerTorso = new FarmerTorso(Sex.Male);
             var ninjaTorso = new NinjaTorso();
 
             farmerTorso.PickUp("Goat in pajamas");
             ninjaTorso.PickUp("Box");
 
+            var cyclistLegs = new CyclistLegs();
+            var countryMusicSingerLegs = new CountryMusicSingerLegs("Blue jeans", false);
 
+            var astronaut = new Minifigure("Major Tom", astronautHead, ninjaTorso, countryMusicSingerLegs);
+            var cowgirl = new Minifigure("Jessie", cowgirlHead, farmerTorso, cyclistLegs);
+
+            cowgirl.SayHello();
+            astronaut.SayHello();
         }
     }
 }
