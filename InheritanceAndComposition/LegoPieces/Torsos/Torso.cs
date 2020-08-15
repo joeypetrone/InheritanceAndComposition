@@ -12,6 +12,9 @@ namespace InheritanceAndComposition.LegoPieces.Torsos
         public string Accessory { get; set; }
         public Sex Sex { get; set; }
 
+        //fields
+        static int _numberOfItemsPickedUp = 0;
+
         //methods
         public virtual void Wave()
         {
@@ -24,6 +27,7 @@ namespace InheritanceAndComposition.LegoPieces.Torsos
             if (IsStrong())
             {
                 Console.WriteLine($"I used my strong arms to pick up the {heavyObject}.");
+                _numberOfItemsPickedUp++;
             }
             else
             {
